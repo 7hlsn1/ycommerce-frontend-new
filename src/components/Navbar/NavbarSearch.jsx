@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './NavbarSearch.module.scss'
 export const NavbarSearch = () => (
-  <form className={`search-bar d-flex flex-grow-1 mx-3 ${styles.form}`} style={{ maxWidth: '600px' }}>
+  <form className={`search-bar   ${styles.form}`} style={{ maxWidth: '600px' }}>
     <input
       className="form-control rounded-start"
       type="search"

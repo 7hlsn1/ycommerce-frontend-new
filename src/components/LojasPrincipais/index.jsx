@@ -8,8 +8,8 @@ const LojasPrincipais = () => {
     useEffect(() => {
         const fetchData = async () => {
             const api = new Sdk();
-            const storesData = await api.getStores();
-            setStores(storesData);
+            // const storesData = await api.getStores();
+            // setStores(storesData);
         }
 
         fetchData();
