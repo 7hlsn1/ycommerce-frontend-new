@@ -5,7 +5,7 @@ export const NavbarSearch = () => (
       <input
         className="form-control rounded-start"
         type="search"
-        placeholder="Buscar no site"
+        placeholder="Buscar no site..."
         aria-label="Search"
       />
       <button className="btn btn-white rounded-end px-3" type="submit">
