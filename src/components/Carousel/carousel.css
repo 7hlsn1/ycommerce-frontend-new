@@ -36,7 +36,5 @@
     .carousel-container {
       width: 100%;
     }
-    .carousel-inner img {
-      max-height: 150px;
-    }
+     
   }

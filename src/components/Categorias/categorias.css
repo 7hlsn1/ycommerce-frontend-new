@@ -1,3 +1,6 @@
+.container {
+    border-radius: 3px;
+}
 .categoria {
     border-radius: 50%;
     display: flex;
@@ -8,6 +11,18 @@
     justify-content: center;
 }
 
+.categories {
+   
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.img svg {
+    width: 30px;
+    height: 30px;
+     
+}
+
 .categoria .img {
     width: 5em;
     height: 5em;
@@ -16,6 +31,11 @@
     background-position: center;
     border-radius: 50%;
     transition: transform 0.1s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larg;
 }
 
 .categoria .img:hover {

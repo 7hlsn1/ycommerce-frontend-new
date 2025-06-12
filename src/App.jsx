@@ -39,9 +39,9 @@
                   <div className="carousel-wrapper">
                     <Carousel />
                   </div>
-                  <div className="ads-wrapper">
+                  {/* <div className="ads-wrapper">
                     <Ads />
-                  </div>
+                  </div> */}
                 </div>
                 <Categorias />
                 <LojasPrincipais/>
