@@ -12,7 +12,9 @@
 }
 
 .categories {
-   
+    gap: 10px;
+    width: 100%;
+    overflow: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
