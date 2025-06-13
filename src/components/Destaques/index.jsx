@@ -92,13 +92,13 @@ const Destaques = () => {
                                                     )}
                                                     <p className="text-muted small">{produto.nomeLoja}</p>
                                                     <button
-                                                        className="btn btn-primary w-100 mt-2"
+                                                        className="btn btn-primary w-100 mt-2 cart-add"
                                                         onClick={(e) => {
                                                             e.stopPropagation();
                                                             addToCart(produto);
                                                         }}
                                                     >
-                                                        <i className="bi bi-cart"></i> <p className="d-none d-lg-block">Adicionar</p>
+                                                        <i className="bi bi-cart"></i>Adicionar
                                                     </button>
                                                 </div>
                                             </div>

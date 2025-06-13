@@ -10,10 +10,30 @@ import { NavbarSideMenu } from "./NavbarSideMenu";
 import { NavbarTopbar } from "./NavbarTopbar";
 import Container from "../Container";
 import logomob from '../../assets/images/ycommerce/favicon.png'
+import { FaArrowAltCircleRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa6";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showCart, setShowCart] = useState(false);
+  const [categories, setCategories] = useState([
+
+    "Eletrônicos",
+    "Moda Feminina",
+    "Moda Masculina",
+    "Casa e Decoração",
+    "Beleza e Cuidados Pessoais",
+    "Esporte e Lazer",
+    "Livros",
+    "Automotivo",
+    "Brinquedos",
+    "Bebês",
+    "Pet Shop",
+    "Informática",
+
+
+  ])
   const { cartItems, removeFromCart } = useCart();
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -46,7 +66,7 @@ const Navbar = () => {
             <NavbarSearch />
 
             <div className="nav-icons d-flex me-4">
-              <NavbarCart 
+              <NavbarCart
                 cartItems={cartItems}
                 removeFromCart={removeFromCart}
                 calculateTotal={calculateTotal}
@@ -54,8 +74,18 @@ const Navbar = () => {
                 setShowCart={setShowCart}
               />
             </div>
+
+          </div>
+          <div className="categories">
+            {
+              categories.map(c => (
+                <a href="#" className="category">{c}  </a>
+
+              ))
+            }
           </div>
         </Container>
+
       </nav>
 
       <NavbarSideMenu menuOpen={menuOpen} toggleMenu={toggleMenu} />

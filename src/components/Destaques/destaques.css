@@ -8,7 +8,12 @@
   border: none;
   min-height: 450px;
 }
-
+.cart-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 .product-card:hover .card-title,
 .product-card:hover .card-text {
   color: var(--bs-primary);

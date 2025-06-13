@@ -1,6 +1,9 @@
 form {
-   
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    input {
+        margin: auto 1em;
+    }
 }
