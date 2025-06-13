@@ -10,9 +10,7 @@ import { NavbarSideMenu } from "./NavbarSideMenu";
 import { NavbarTopbar } from "./NavbarTopbar";
 import Container from "../Container";
 import logomob from '../../assets/images/ycommerce/favicon.png'
-import { FaArrowAltCircleRight } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa6";
-import { IoIosArrowForward } from "react-icons/io";
+import styles from './index.module.scss'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,7 +42,7 @@ const Navbar = () => {
       <nav className="main-navbar">
         <Container>
           <NavbarTopbar />
-          <div className="navbar-content d-flex align-items-center justify-content-between py-2">
+          <div className={`navbar-content d-flex align-items-center justify-content-between py-2 ${styles.navbar}`}>
             <HamburguerMenu className="hamburguer-button" toggleMenu={toggleMenu} />
             <Link className="navbar-brand d-flex d-lg-none align-items-center" to="/">
               <img
@@ -76,10 +74,10 @@ const Navbar = () => {
             </div>
 
           </div>
-          <div className="categories">
+          <div className={styles.categories}>
             {
               categories.map(c => (
-                <a href="#" className="category">{c}  </a>
+                <a href="#" className={styles.category}>{c}  </a>
 
               ))
             }

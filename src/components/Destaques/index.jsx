@@ -5,8 +5,8 @@ import produtos from "../../data/produtos";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./destaques.css";
-
-const Destaques = () => {
+import styles from './index.module.scss'
+const Destaques = (props) => {
     const navigate = useNavigate();
     const { addToCart } = useCart();
     const [activeIndex, setActiveIndex] = useState(0);
@@ -41,10 +41,10 @@ const Destaques = () => {
     }, []);
 
     return (
-        <div className="container my-4 bg-white rounded p-3">
-            {/* Cabeçalho com título e indicadores alinhados */}
+        <div className={`container my-4 bg-white rounded p-3 ${styles.container}`}>
+
             <div className="d-flex align-items-center mb-3 justify-content-between">
-                <h4 className="mb-0 me-3">Ofertas em Destaque</h4>
+                <h5 className="mb-0 me-3">{props.title ?? 'Destaques'}</h5>
                 <div className="d-flex align-items-center custom-indicators">
                     {slides.map((_, index) => (
                         <button

@@ -1,18 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Carousel from "./components/Carousel";
-import Ads from "./components/Ads";
-import Container from "./components/Container";
-import Destaques from "./components/Destaques";
+
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
 import Footer from "./components/Footer/index.jsx";
-import Categorias from "./components/Categorias";
+
 import Reviews from "./components/Reviews";
 import { CartProvider } from "./context/CartContext";
 import CentralVendedor from "./pages/CentralVendedor";
-import LojasPrincipais from "./components/LojasPrincipais/index.jsx";
+
 import HelpCenter from "./pages/HelpCenter";
 import MinhaConta from "./pages/MinhaConta";
 import Carrinho from "./pages/Carrinho/index.jsx";
@@ -21,6 +18,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css';
 import './sdk.jsx';
+import Home from "./pages/Home/index.jsx";
 
 function AppContent() {
   const location = useLocation();
@@ -32,28 +30,14 @@ function AppContent() {
       {hasNavbar && <Navbar />}
 
       <Routes>
-        <Route path="/" element={
-          <>
-            <Container>
-              <div className="grid-container" style={{marginTop:'8em'}}>
-                <div className="carousel-wrapper">
-                  <Carousel />
-                </div>
-                
-              </div>
-           
-              {/* <LojasPrincipais /> */}
-              <Destaques />
-            </Container>
-          </>
-        } />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/reviews/:id" element={<Reviews />} />
         <Route path="/central-vendedor" element={<CentralVendedor />} />
         <Route path="/ajuda" element={<HelpCenter />} />
         <Route path="/minha-conta" element={<MinhaConta />} />
-        <Route path="/carrinho" element={<Carrinho />} /> {/* ✅ Adicionando a rota do carrinho */}
+        <Route path="/carrinho" element={<Carrinho />} />  
       </Routes>
 
       {!isCentralVendedor && <Footer />}

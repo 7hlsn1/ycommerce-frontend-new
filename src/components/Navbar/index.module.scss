@@ -1,0 +1,26 @@
+.categories {
+    gap: 10px;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .category {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        color: white;
+        white-space: nowrap;
+        text-decoration: none;
+        margin-right: 1em;
+    }
+}
+
+.navbar {
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}

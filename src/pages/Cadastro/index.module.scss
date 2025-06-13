@@ -1,0 +1,22 @@
+form {
+    display: flex;
+    flex-direction: column;
+
+
+    div {
+
+        width: 100%;
+
+        input {
+
+            width: 100% ;
+
+        }
+    }
+
+    .form_check input {
+      
+        width: 20px !important;
+    }
+
+}

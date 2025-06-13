@@ -1,8 +1,11 @@
-form {
+.form {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
     input {
         margin: auto 1em;
     }

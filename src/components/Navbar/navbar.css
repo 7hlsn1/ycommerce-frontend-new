@@ -9,23 +9,8 @@
 
 }
 
-.main-navbar .categories {
-  display: flex;
-  overflow: auto;
-   
-  padding: 1em;
 
-}
 
-.categories .category {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  color: white;
-  white-space: nowrap;
-  text-decoration: none;
-  margin-right: 1em;
-}
 
 
 /* Adicione ao seu arquivo CSS */

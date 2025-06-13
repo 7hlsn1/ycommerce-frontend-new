@@ -3,7 +3,7 @@ import '../Carousel/carousel.css';
 import './container.css'
 import styles from './index.module.scss'
 const Container = ({ children }) => (
-  <div className={`my-custom-container w-100 ${styles.navbar}`}>
+  <div className={`${styles.navbar} `}>
     {children}
   </div>
 );
